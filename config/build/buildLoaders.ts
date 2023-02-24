@@ -1,27 +1,22 @@
+import { BuildOptions } from "./types/config";
+import { loader as MiniCssExtractPluginLoader } from "mini-css-extract-plugin";
 import webpack from "webpack";
 
-export function buildLoaders(): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+  const cssLoader = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      options.isDev ? "style-loader" : MiniCssExtractPluginLoader,
+      "css-loader",
+      "sass-loader",
+    ],
+  };
 
-    const cssLoader = {
-        test: /\.s[ac]ss$/i,
-        use: [
-            // Creates `style` nodes from js strings
-            'style-loader',
-            // Translates CSS into CommonJS
-            'css-loader',
-            // Compiles Sass to CSS
-            'sass-loader',
-        ]
-    }
+  const typescriptLoader = {
+    test: /\.tsx?$/,
+    use: "ts-loader",
+    exclude: /node_modules/,
+  };
 
-    const typescriptLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-    }
-
-    return [
-        typescriptLoader,
-        cssLoader,
-    ]
+  return [typescriptLoader, cssLoader];
 }
