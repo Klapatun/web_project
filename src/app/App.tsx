@@ -9,10 +9,10 @@ export const App = () => {
 
   return (
     <div className={classNames("app", {}, [theme])}>
+      <Navbar />
       <div>
         <button onClick={toggleTheme}>Поменять тему</button>
       </div>
-      <Navbar />
       <AppRouter />
     </div>
   );
