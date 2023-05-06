@@ -9,7 +9,6 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:sccs": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
-
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -25,6 +24,7 @@
     "babel-plugin-i18next-extract": "^0.8.3",
     "css-loader": "^6.6.0",
     "eslint": "^8.40.0",
+    "eslint-plugin-i18next": "^6.0.1",
     "eslint-plugin-react": "^7.32.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
