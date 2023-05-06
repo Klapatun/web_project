@@ -4,7 +4,9 @@
   "scripts": {
     "start": "npx webpack serve --env port=3000 ",
     "build:dev": "npx webpack --env mode=development",
-    "build:prod": "npx webpack --env mode=production"
+    "build:prod": "npx webpack --env mode=production",
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
