@@ -3,7 +3,8 @@ module.exports = {
 		'browser': true,
 		'es2021': true,
 		'amd': true,
-		'node': true
+		'node': true,
+		'jest': true
 	},
 	'extends': [
 		'eslint:recommended',
@@ -41,5 +42,6 @@ module.exports = {
 			'always'
 		],
 		'react/react-in-jsx-scope': 'off',
+		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs']
 	}
 };
