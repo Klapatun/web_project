@@ -1,5 +1,7 @@
 {
   "TEST_EXAMPLE": "Test example",
   "TRANSLATE": "Translate",
-  "LANG": "Русский"
+  "LANG": "Русский",
+  "UNEXPECTED_ERROR": "Unexpected error",
+  "UPDATE_PAGE": "Update page"
 }

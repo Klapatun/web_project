@@ -1,5 +1,7 @@
 {
   "TEST_EXAMPLE": "Тестовый пример",
   "TRANSLATE": "Перевод",
-  "LANG": "English"
+  "LANG": "English",
+  "UNEXPECTED_ERROR": "Непредвиденная ошибка",
+  "UPDATE_PAGE": "Обновить страницу"
 }
