@@ -13,6 +13,12 @@ module.exports = {
 		'plugin:i18next/recommended'
 	],
 	'overrides': [
+		{
+			files: ['**/src/**/*.test.{ts,tsx}'],
+			rules: {
+				'i18next/no-literal-string': 'off',
+			}
+		}
 	],
 	'parser': '@typescript-eslint/parser',
 	'parserOptions': {
@@ -43,6 +49,12 @@ module.exports = {
 		],
 		'react/react-in-jsx-scope': 'off',
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
-		'i18next/no-literal-string': ['warn']
-	}
+		'i18next/no-literal-string': [
+			'warn',
+			{
+				markupOnly: true,
+				ignoreAttribute: ['data-testid']
+			}
+		]
+	},
 };
