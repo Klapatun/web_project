@@ -42,6 +42,7 @@ module.exports = {
 			'always'
 		],
 		'react/react-in-jsx-scope': 'off',
-		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs']
+		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+		'i18next/no-literal-string': ['warn']
 	}
 };

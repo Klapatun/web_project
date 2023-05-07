@@ -3,6 +3,7 @@
   "rules": {
     "indentation": "tab",
     "selector-class-pattern": null,
-    "scss/double-slash-comment-whitespace-inside": null
+    "scss/double-slash-comment-whitespace-inside": null,
+    "declaration-empty-line-before": null
   }
 }
