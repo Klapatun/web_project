@@ -6,55 +6,29 @@ module.exports = {
 		'node': true,
 		'jest': true
 	},
-	'extends': [
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:i18next/recommended'
-	],
-	'overrides': [
-		{
-			files: ['**/src/**/*.test.{ts,tsx}'],
-			rules: {
-				'i18next/no-literal-string': 'off',
-			}
+	'extends': ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+	'overrides': [{
+		files: ['**/src/**/*.test.{ts,tsx}'],
+		rules: {
+			'i18next/no-literal-string': 'off'
 		}
-	],
+	}],
 	'parser': '@typescript-eslint/parser',
 	'parserOptions': {
 		'ecmaVersion': 'latest',
 		'sourceType': 'module'
 	},
-	'plugins': [
-		'react',
-		'@typescript-eslint',
-		'i18next'
-	],
+	'plugins': ['react', '@typescript-eslint', 'i18next'],
 	'rules': {
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'windows'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'always'
-		],
+		'indent': ['error', 'tab'],
+		'linebreak-style': ['error', 'windows'],
+		'quotes': ['error', 'single'],
+		'semi': ['error', 'always'],
 		'react/react-in-jsx-scope': 'off',
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
-		'i18next/no-literal-string': [
-			'warn',
-			{
-				markupOnly: true,
-				ignoreAttribute: ['data-testid']
-			}
-		]
-	},
+		'i18next/no-literal-string': ['warn', {
+			markupOnly: true,
+			ignoreAttribute: ['data-testid', 'to']
+		}]
+	}
 };
