@@ -1,44 +1,45 @@
-import type {Meta, StoryObj} from '@storybook/react';
-
-import 'app/styles/index.scss';
-import {AppLink, AppLinkTheme} from './AppLink';
-import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { AppLink, AppLinkTheme } from './AppLink';
 import {Theme} from 'app/providers/ThemeProviders';
 
-const meta: Meta<typeof AppLink> = {
+export default {
 	title: 'shared/AppLink',
 	component: AppLink,
-	decorators: [],
+	argTypes: {
+		backgroundColor: { control: 'color' },
+	},
 	args: {
-		to: '/'
-	}
+		to: '/',
+	},
+} as ComponentMeta<typeof AppLink>;
+
+const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+	children: 'Text',
+	theme: AppLinkTheme.PRIMARY,
 };
 
-export default meta;
-type Story = StoryObj<typeof AppLink>;
-
-export const Primary: Story = {
-	render: (args) => (
-		<AppLink theme={AppLinkTheme.PRIMARY} {...args}>Text</AppLink>
-	),
+export const Secondary = Template.bind({});
+Secondary.args = {
+	children: 'Text',
+	theme: AppLinkTheme.SECONDARY,
 };
 
-export const Secondary: Story = {
-	render: (args) => (
-		<AppLink theme={AppLinkTheme.SECONDARY} {...args}>Text</AppLink>
-	),
+export const PrimaryDark = Template.bind({});
+PrimaryDark.args = {
+	children: 'Text',
+	theme: AppLinkTheme.PRIMARY,
 };
+PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const PrimaryDark: Story = {
-	render: (args) => (
-		<AppLink theme={AppLinkTheme.PRIMARY} {...args}>Text</AppLink>
-	),
-	decorators: [ThemeDecorator(Theme.DARK)]
+export const SecondaryDark = Template.bind({});
+SecondaryDark.args = {
+	children: 'Text',
+	theme: AppLinkTheme.SECONDARY,
 };
+SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const SecondaryDark: Story = {
-	render: (args) => (
-		<AppLink theme={AppLinkTheme.SECONDARY} {...args}>Text</AppLink>
-	),
-	decorators: [ThemeDecorator(Theme.DARK)]
-};
