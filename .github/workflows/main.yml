@@ -1,5 +1,4 @@
 name: Web-project Lint, Test and Build
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
     branches: [ master ]
