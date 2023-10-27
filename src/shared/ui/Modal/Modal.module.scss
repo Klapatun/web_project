@@ -7,6 +7,7 @@
 	z-index: -1;
 	opacity: 0;
 	pointer-events: none;
+	color: var(--primary-color);
 }
 
 .overlay {
@@ -42,4 +43,9 @@
 	.content {
 		transform: scale(0);
 	}
+}
+
+.Modal.dark {
+	--bg-color: #181919;
+	--primary-color: #626262;
 }

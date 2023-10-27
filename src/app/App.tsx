@@ -1,4 +1,3 @@
-import './styles/index.scss';
 import { useTheme } from 'app/providers/ThemeProviders/lib/useTheme';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
@@ -16,8 +15,6 @@ export const App = () => {
 		<div className={classNames('app', {}, [theme])}>
 			<Suspense fallback={<div>Loading...</div>}>
 				<Navbar />
-				<button onClick={() => setIsOpenModal(true)}>toggle</button>
-				<Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>dbvjhdsbivb</Modal>
 				<div className='content-page'>
 					<Sidebar />
 					<AppRouter />
