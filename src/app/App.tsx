@@ -3,13 +3,10 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
 import { Navbar } from 'widgets/Navbar';
 import {Sidebar} from 'widgets/Sidebar';
-import {Suspense, useState} from 'react';
-import {Modal} from 'shared/ui/Modal/Modal';
+import {Suspense} from 'react';
 
 export const App = () => {
 	const { theme } = useTheme();
-
-	const [isOpenModal, setIsOpenModal] = useState(false);
 
 	return (
 		<div className={classNames('app', {}, [theme])}>

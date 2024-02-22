@@ -3,5 +3,9 @@
   "TRANSLATE": "Translate",
   "LANG": "Русский",
   "UNEXPECTED_ERROR": "Unexpected error",
-  "UPDATE_PAGE": "Update page"
+  "UPDATE_PAGE": "Update page",
+  "Войти": "Log in",
+  "Главная": "Main",
+  "О сайте": "About us",
+  "Страница не найдена": "Not found"
 }
