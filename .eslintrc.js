@@ -31,6 +31,7 @@ module.exports = {
 			ignoreAttribute: ['data-testid', 'to']
 		}],
 		'react-hooks/rules-of-hooks': 'error',
-		'react-hooks/exhaustive-deps': 'error'
+		'react-hooks/exhaustive-deps': 'error',
+		'react/no-deprecated': 'warn',
 	}
 };
