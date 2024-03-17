@@ -4,3 +4,5 @@ node_modules/
 /storybook-static
 .loki/report.json
 .loki/report.html
+
+package-lock.json
