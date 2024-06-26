@@ -24,6 +24,8 @@ module.exports = {
         'react-hooks',
     ],
     rules: {
+        eqeqeq: 'warn',
+        'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
@@ -43,7 +45,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
-            'error',
+            'warn',
             {
                 markupOnly: true,
                 ignoreAttribute: ['data-testid', 'to'],
@@ -55,6 +57,7 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies,
         'no-param-reassign': 'off',
+        'eslint-disable-next-line': 'off',
     },
     globals: {
         __IS_DEV__: true,
