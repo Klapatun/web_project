@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
-    FC, useCallback, useEffect, useRef, useState,
+    FC, MouseEventHandler, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
 import { useTheme } from 'app/providers/ThemeProviders';
@@ -39,8 +39,8 @@ export const Modal: FC<ModalProps> = (props) => {
         }
     }, [closeHandler]);
 
-    const onContentClick = (e: MouseEvent) => {
-        e.stopPropagation();
+    const onContentClick: MouseEventHandler<HTMLDivElement> = (event) => {
+        event.stopPropagation();
     };
 
     useEffect(() => {
