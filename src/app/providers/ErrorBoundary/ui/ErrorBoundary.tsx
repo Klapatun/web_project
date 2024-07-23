@@ -43,6 +43,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             );
         }
 
+        // eslint-disable-next-line react/destructuring-assignment
         return this.props.children;
     }
 }
