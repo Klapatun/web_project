@@ -8,6 +8,7 @@
   "counterValue": "counterValue",
   "decrement": "decrement",
   "increment": "increment",
+  "throw error": "кинуть ошибку",
   "Войти": "Войти",
   "Главная": "Главная",
   "О сайте": "О сайте",
