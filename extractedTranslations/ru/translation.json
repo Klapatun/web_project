@@ -9,6 +9,8 @@
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "кинуть ошибку",
+  "Введите password": "Введите password",
+  "Введите username": "Введите username",
   "Войти": "Войти",
   "Главная": "Главная",
   "О сайте": "О сайте",

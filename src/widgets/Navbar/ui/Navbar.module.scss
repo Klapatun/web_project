@@ -13,4 +13,10 @@
 
 .links {
 	margin-left: auto;
+	padding: 8px;
+	border: 1px transparent;
+	&:focus {
+		border: 1px solid var(--bg-color);
+		border-radius: 4px;
+	}
 }
