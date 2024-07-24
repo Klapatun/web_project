@@ -8,7 +8,6 @@ export const MainPage = () => {
     return (
         <div>
             {t('MAIN_PAGE')}
-            <Counter />
         </div>
     );
 };
