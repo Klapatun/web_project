@@ -57,3 +57,7 @@ export const SquareSizeL: Story = {
 export const SquareSizeXL: Story = {
     render: () => <Button theme={ButtonTheme.BACKGROUND} size={ButtonSize.XL} square>{'>'}</Button>,
 };
+
+export const Disabled: Story = {
+    render: () => <Button theme={ButtonTheme.BACKGROUND} disabled>{'>'}</Button>,
+};
