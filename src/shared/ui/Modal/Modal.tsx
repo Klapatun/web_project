@@ -39,10 +39,16 @@ export const Modal: FC<ModalProps> = (props) => {
         }
     }, [onClose]);
 
+    useEffect(() => () => {
+        onClose();
+    }, [onClose]);
+
     useEffect(() => {
         if (isOpen) {
             setIsMounted(true);
         }
+
+        return () => setIsMounted(false);
     }, [isOpen]);
 
     const onKeyDown = useCallback((e: KeyboardEvent) => {
