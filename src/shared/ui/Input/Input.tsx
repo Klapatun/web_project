@@ -36,8 +36,9 @@ export const Input = memo((props: InputProps) => {
         setIsFocused(false);
     };
 
-    const onFocus = () => {
+    const onFocus = (e: React.ChangeEvent<HTMLInputElement>) => {
         setIsFocused(true);
+        setCaretPosision(e.target.value.length);
     };
 
     const onSelect = (e: any) => {
